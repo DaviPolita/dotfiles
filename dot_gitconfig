@@ -1,0 +1,7 @@
+[credential "https://gitlab.weg.net"]
+	provider = generic
+[user]
+	name = davipolita
+	email = davipolita@weg.net
+[core]
+	editor = vim
