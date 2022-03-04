@@ -115,8 +115,21 @@ else
 	"Plugins
 
 	"Adiciona numeros
-	:set number relativenumber
+	set number relativenumber
 		
 	"yank to clipboard
 	set clipboard=unnamedplus
+
+	" Options
+	set background=dark
+	set completeopt=noinsert,menuone,noselect
+	set cursorline
+	set hidden
+	set inccommand=split
+	set mouse=a
+	"set relativenumber
+	set splitbelow splitright
+	set title
+	set ttimeoutlen=0
+	set wildmenu  
 endif
