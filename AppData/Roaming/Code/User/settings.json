@@ -1,27 +1,27 @@
 {
-    "git.enableSmartCommit": true,
+    "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     "thunder-client.codeSnippetLanguage": "js-fetch",
     "remote.SSH.remotePlatform": {
         "10.0.0.57": "linux"
     },
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
+    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "[ ]", "[x]"],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "prettier.tabWidth": 4,
     "go.toolsManagement.autoUpdate": true,
     "settingsSync.ignoredExtensions": [
         "ms-vscode-remote.remote-ssh",
         "ms-vscode-remote.remote-ssh-edit",
         "svelte.svelte-vscode"
     ],
+    "prettier.tabWidth": 4,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "emmet.showSuggestionsAsSnippets": true,
+    "material-icon-theme.showWelcomeMessage": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
 
     // Copilot
     "github.copilot.enable": {
@@ -30,15 +30,6 @@
         "plaintext": true,
         "markdown": true
     },
-    "security.workspace.trust.untrustedFiles": "open",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "git.autofetch": true,
-    "explorer.confirmDelete": false,
-    "emmet.showSuggestionsAsSnippets": true,
-    "material-icon-theme.showWelcomeMessage": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
     // Colors for the normal editor in javascript
     "jsonColorToken.languages": [
         "json",
@@ -247,8 +238,8 @@
     },
 
     // NeoVim stuff
-    "vscode-neovim.neovimExecutablePaths.win32": "C:/Neovim/bin/nvim.exe",
-    "vscode-neovim.neovimInitVimPaths.win32": "~/AppData/Local/nvim/init.vim",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\davipolita\\scoop\\shims\\nvim.exe",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\davipolita\\.config\\nvim\\vscode.vim",
     "whichkey.sortOrder": "alphabetically",
     "whichkey.delay": 0,
     "whichkey.bindings": [
@@ -666,7 +657,7 @@
                     "key": "k",
                     "name": "Insert line above",
                     "type": "command",
-                    "command": "editor.action.insertLineBefore"
+                    "command": "editor.action.normalinsertLineBefore"
                 },
                 {
                     "key": "s",
