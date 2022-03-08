@@ -8,7 +8,8 @@ keystate = ""
 
 *Capslock::
   WinGetClass, classname, A
-  if (classname = "VirtualConsoleClass" or classname = "mintty")
+  WinGet, activeprocess, ProcessName, A
+  if (classname = "VirtualConsoleClass" or classname = "mintty" or activeprocess = "Code.exe" )
   {
     SetCapsLockState, Off
     Send, {ESC}
