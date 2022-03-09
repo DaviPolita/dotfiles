@@ -1,0 +1,26 @@
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+classname = ""
+keystate = ""
+
+*Capslock::
+  WinGetClass, classname, A
+  WinGet, activeprocess, ProcessName, A
+  if (classname = "CASCADIA_HOSTING_WINDOW_CLASS" or classname = "ConsoleWindowClass" or activeprocess = "Code.exe" )
+  {
+    SetCapsLockState, Off
+    Send, {ESC}
+  }
+  else
+  {
+    GetKeyState, keystate, CapsLock, T
+    if (keystate = "D")
+      SetCapsLockState, Off
+    else
+      SetCapsLockState, On
+    return
+  }
+  return
