@@ -2,6 +2,8 @@
 	provider = generic
 [user]
 	name = davipolita
-	email = davipolita@weg.net
+	email = davipolita@gmail.net
 [core]
 	editor = vim
+[credential]
+	helper = manager-core
