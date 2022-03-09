@@ -11,7 +11,9 @@ runtime ./maps.vim
 
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
-
+"  Language
+language en_US
+ 
 " init autocmd
 autocmd!
 " set script encoding
