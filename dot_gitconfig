@@ -4,6 +4,8 @@
 	name = davipolita
 	email = davipolita@gmail.net
 [core]
-	editor = vim
+	editor = nvim
+[edit]
+	command = nvim
 [credential]
 	helper = manager-core
