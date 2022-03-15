@@ -12,7 +12,7 @@ runtime ./maps.vim
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
 "  Language
-language en_US
+"language en_US
  
 " init autocmd
 autocmd!
