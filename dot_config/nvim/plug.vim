@@ -20,7 +20,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'kyazdani42/nvim-web-devicons'
-"  Plug 'hoob3rt/lualine.nvim'
+  Plug 'hoob3rt/lualine.nvim'
 "  Plug 'kristijanhusak/defx-git'
 "  Plug 'kristijanhusak/defx-icons'
 "  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,8 +29,8 @@ if has("nvim")
 "  Plug 'hrsh7th/cmp-buffer'
 "  Plug 'hrsh7th/nvim-cmp'
 "  Plug 'onsails/lspkind-nvim'
-"  Plug 'windwp/nvim-autopairs'
-"  Plug 'windwp/nvim-ts-autotag'
+  Plug 'windwp/nvim-autopairs'
+  Plug 'windwp/nvim-ts-autotag'
 endif
 
 call plug#end()

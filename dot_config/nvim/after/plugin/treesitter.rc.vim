@@ -21,6 +21,7 @@ lua << EOF
         "swift",
         "html",
         "css",
+        "c",
         },
     }
 EOF
