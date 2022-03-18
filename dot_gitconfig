@@ -2,10 +2,10 @@
 	provider = generic
 [user]
 	name = davipolita
-	email = davipolita@gmail.net
+	email = davipolita@gmail.com
 [core]
 	editor = nvim
 [edit]
 	command = nvim
 [credential]
-	helper = manager-core
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
