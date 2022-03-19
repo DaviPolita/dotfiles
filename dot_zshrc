@@ -15,6 +15,10 @@ export PATH=$PATH:$GOROOT/bin
 # XDG_CONFIG_HOME
 export XDG_CONFIG_HOME=$HOME/.config
 
+# default editor
+export EDITOR=nvim
+export VISUAL=$EDITOR
+
 unsetopt BEEP
 
 # Set name of the theme to load --- if set to "random", it will
