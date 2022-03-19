@@ -5,11 +5,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 classname = ""
 keystate = ""
+activeprocess = ""
 
 *Capslock::
-  WinGetClass, classname, A
   WinGet, activeprocess, ProcessName, A
-  if (classname = "CASCADIA_HOSTING_WINDOW_CLASS" or classname = "ConsoleWindowClass" or activeprocess = "Code.exe" )
+  if (activeprocess = "WindowsTerminal.exe" or activeprocess = "Code.exe" )
   {
     SetCapsLockState, Off
     Send, {ESC}

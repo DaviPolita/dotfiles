@@ -83,6 +83,10 @@ set formatoptions+=r
 set cursorline
 "set cursorcolumn
 
+" disable search highlight
+set nohlsearch
+
+
 " Set cursor line color on visual mode
 highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 
