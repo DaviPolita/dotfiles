@@ -1,16 +1,16 @@
 " Description: Keymaps
 
+let mapleader = (' ')
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
+" Delete single characted without yank
 nnoremap x "_x
 
 " Increment/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
-
-" Delete a word backwards
-"nnoremap dw vb"_d
 
 " Select all
 nmap <C-a> gg<S-v>G
@@ -50,12 +50,19 @@ map s<left> <C-w>h
 map s<up> <C-w>k
 map s<down> <C-w>j
 map s<right> <C-w>l
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
-" Resize window
-nmap <C-w><left> <C-w><
-nmap <C-w><right> <C-w>>
-nmap <C-w><up> <C-w>+
-nmap <C-w><down> <C-w>-
+
+" Keep the next search centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Undo break points
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ( (<C-g>u
+inoremap " "<C-g>u
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
