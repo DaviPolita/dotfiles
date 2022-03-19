@@ -12,7 +12,7 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+f' -PSReadLineChordeverseHistory 'Ctrl+r'
 
 # Set theme
-Set-PoshPrompt -Theme night-owl
+Set-PoshPrompt -Theme craver
 
 # Load prompt configs
 oh-my-posh --init --shell pwsh --config 'C:\Users\Davi\.config\powershell\ompTheme.omp.json' | Invoke-Expression
