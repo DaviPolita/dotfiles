@@ -12,8 +12,8 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+f' -PSReadLineChordeverseHistory 'Ctrl+r'
 
 # Set theme
-#Set-PoshPrompt -Theme craver
-Set-PoshPrompt -Theme $HOME/.config/powershell/.oh-my-posh.omp.json
+Set-PoshPrompt -Theme amro
+#Set-PoshPrompt -Theme $HOME/.config/powershell/.oh-my-posh.omp.json
 
 # Load prompt configs
 #oh-my-posh --init --shell pwsh --config 'C:\Users\Davi\.config\powershell\ompTheme.omp.json' | Invoke-Expression
