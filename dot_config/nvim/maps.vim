@@ -35,12 +35,12 @@ vnoremap <silent> # :<C-U>
 
 " Open current directory
 nmap te :tabedit 
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+nmap <C-t>      :Texplore<CR> 
+nmap <S-Tab>    :tabprev<Return>
+nmap <Tab>      :tabnext<Return>
 
 "------------------------------
 " Windows
-
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
@@ -51,16 +51,21 @@ map s<up> <C-w>k
 map s<down> <C-w>j
 map s<right> <C-w>l
 
+" Capital Y to Yank til the end of the line
+nnoremap Y yg$
+
 " Keep the next search centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+"------------------------------
 " Undo break points
 inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap ( (<C-g>u
 inoremap " "<C-g>u
 
+"------------------------------
 " Moving text
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==

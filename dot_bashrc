@@ -11,7 +11,7 @@ export OSH=/c/Users/davipolita/.oh-my-bash
 export XDG_CONFIG_HOME=$HOME/.config
 
 # default editor
-export EDITOR=nvim
+export EDITOR=vim
 export VISUAL=$EDITOR
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -123,3 +123,4 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+alias cz="chezmoi"

@@ -99,7 +99,20 @@ nmap gcc <Plug>VSCodeCommentaryLine
 " Simulate same TAB behavior in VSCode
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
-	
+
+" Capital Y to Yank til the end of the line
+nnoremap Y yg$
+
+" Keep the next search centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+"------------------------------
+" Undo break points
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ( (<C-g>u
+inoremap " "<C-g>u
 	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
