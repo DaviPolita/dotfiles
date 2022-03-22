@@ -9,7 +9,7 @@ activeprocess = ""
 
 *Capslock::
   WinGet, activeprocess, ProcessName, A
-  if (activeprocess = "WindowsTerminal.exe" or activeprocess = "Code.exe" )
+  if (activeprocess = "WindowsTerminal.exe" or activeprocess = "Code.exe" or activeprocess = "ubuntu2004.exe")
   {
     SetCapsLockState, Off
     Send, {ESC}
