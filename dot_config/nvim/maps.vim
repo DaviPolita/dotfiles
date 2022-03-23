@@ -31,8 +31,10 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 "-----------------------------
-" Tabs
+"Open Explorer
+nmap <Leader>e :E<CR>
 
+" Tabs
 " Open current directory
 nmap te :tabedit 
 nmap <C-t>      :Texplore<CR> 
@@ -60,8 +62,8 @@ nnoremap N Nzzzv
 
 "------------------------------
 " Undo break points
-inoremap , ,<C-g>u
 inoremap . .<C-g>u
+inoremap , ,<C-g>u
 inoremap ( (<C-g>u
 inoremap " "<C-g>u
 
