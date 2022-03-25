@@ -184,5 +184,28 @@
         "key": "ctrl+shift+c",
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "turboConsoleLog.displayLogMessage"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "-turboConsoleLog.displayLogMessage"
     }
 ]
