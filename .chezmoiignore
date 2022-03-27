@@ -7,3 +7,6 @@ AppData/
 .gitconfig
 {{   end }}
 {{ end }}
+
+private_chezmoistate.boltdb
+histfile
