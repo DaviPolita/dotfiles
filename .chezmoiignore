@@ -1,0 +1,9 @@
+f eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# ignore non linux directories
+autohotkey/
+Documents/
+AppData/
+.gitconfig
+{{   end }}
+{{ end }}
