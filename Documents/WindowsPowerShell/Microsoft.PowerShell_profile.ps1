@@ -20,6 +20,7 @@ Set-PoshPrompt -Theme amro
 
 # Alias (Optional)
 Set-Alias vim nvim
+Set-Alias cz chezmoi
 Set-Alias g git
 Set-Alias ll ls
 Set-Alias grep findstr
@@ -30,4 +31,8 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
         Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
+
+function czcd {
+    cd $(chezmoi source-path)
 }
