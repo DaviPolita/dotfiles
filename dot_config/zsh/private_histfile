@@ -1,0 +1,65 @@
+: 1648420364:0;exit
+: 1648420364:0;la
+: 1648420364:0;ls
+: 1648420364:0;which pacman
+: 1648420364:0;which nvim
+: 1648420364:0;exit
+: 1648420364:0;echo $SHELL
+: 1648420364:0;pws
+: 1648420364:0;pwd
+: 1648420364:0;cd ~
+: 1648420364:0;pwd
+: 1648420364:0;cd ~
+: 1648420364:0;pwd
+: 1648420364:0;pwd
+: 1648420364:0;sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+: 1648420364:0;wget
+: 1648420364:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+: 1648420364:0;exit
+: 1648419631:0;chemzoi add .
+: 1648419638:0;git status
+: 1648419642:0;git add .
+: 1648419656:0;git commit -m "update zsh config"
+: 1648419658:0;git push
+: 1648420359:0;cd ~
+: 1648420364:0;exit
+: 1648420487:0;cz 
+: 1648420493:0;cz edit .zshrc
+: 1648420548:0;source .zshrc
+: 1648420552:0;czcd
+: 1648420586:0;cz edit .zshrc
+: 1648420602:0;source .zshrc
+: 1648420605:0;czcd
+: 1648420612:0;cz edit .zshrc
+: 1648420826:0;cd $(chezmoi source-path)
+: 1648420831:0;exit
+: 1648420874:0;czcd
+: 1648420946:0;cd .config
+: 1648420947:0;la
+: 1648420951:0;cd zsh
+: 1648420952:0;la
+: 1648420965:0;mkdir zshfunctions
+: 1648420968:0;cd zshfunctions
+: 1648421012:0;vim czcd
+: 1648421058:0;cd ~
+: 1648421069:0;cz edit .zshrc
+: 1648421239:0;source .zshrc
+: 1648421245:0;czcd
+: 1648421267:0;chezmoi add .config/zsh
+: 1648421284:0;cd .config/chezmoi
+: 1648421286:0;vim .
+: 1648421301:0;cd ..
+: 1648421304:0;vim .
+: 1648421412:0;autoload czcd
+: 1648421419:0;czcd
+: 1648421427:0;cd ~
+: 1648421433:0;vim .zshrc
+: 1648421457:0;chezmoi apply
+: 1648421473:0;vim .zshrc
+: 1648421497:0;source .zshrc
+: 1648421500:0;czcd
+: 1648421506:0;exit
+: 1648421518:0;czcd
+: 1648421521:0;cd ~
+: 1648421533:0;cz add .zshrc
+: 1648421543:0;cz add .config/zsh
