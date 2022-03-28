@@ -9,4 +9,5 @@ AppData/
 {{ end }}
 
 private_chezmoistate.boltdb
+chezmoistate.boltdb
 histfile
