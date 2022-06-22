@@ -1,4 +1,0 @@
-# open chezmoi source path in the current shell
-chezmoi-cd() {
-    cd $(chezmoi source-path)
-}
