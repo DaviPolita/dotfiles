@@ -1,3 +1,14 @@
+# run custom env variables from the machine
+# proxy setup for work is in proxy.sh
+if [ -d /etc/profile.d ]; then
+  for i in /etc/profile.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+
 # Environment variables set everywhere
 export EDITOR="nvim"
 #export TERMINAL="kitty"
