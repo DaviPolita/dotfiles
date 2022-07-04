@@ -1,0 +1,2 @@
+export PATH=/usr/local/nvim-linux64/bin:$PATH
+export AIRFLOW_HOME=~/Projetos/Airflow
