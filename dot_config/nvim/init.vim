@@ -13,6 +13,9 @@ runtime ./maps.vim
 " ---------------------------------------------------------------------
 "  Language
 "language en_US
+
+" use system clipboard
+set clipboard=unnamedplus
  
 " init autocmd
 autocmd!
