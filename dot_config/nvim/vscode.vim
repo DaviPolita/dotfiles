@@ -1,8 +1,9 @@
 " VSCode extension
 
+set shada="NONE"
+
 language en_US
 :set shell=powershell.exe
-
 "Adiciona numeros
 :set number relativenumber
     
