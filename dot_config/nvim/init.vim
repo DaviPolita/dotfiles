@@ -13,6 +13,8 @@ runtime ./maps.vim
 " ---------------------------------------------------------------------
 "  Language
 "language en_US
+"
+set shada="NONE"
 
 " use system clipboard
 set clipboard=unnamedplus
