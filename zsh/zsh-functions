@@ -1,0 +1,9 @@
+#!/bin/sh
+
+function yanktoclipboard(){
+    echo $BUFFER | xsel -i -b
+}
+
+function pastefromclipboard(){
+    RBUFFER=$(xsel -o -b </dev/null)$RBUFFER
+}
