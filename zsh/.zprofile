@@ -11,8 +11,6 @@ fi
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-#export TERMINAL="kitty"
-#export BROWSER="brave"
 
 # XDG Paths
 export XDG_CONFIG_HOME=$HOME/.config
