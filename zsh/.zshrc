@@ -42,3 +42,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
 source "$ZDOTDIR/zsh-aliases"
+
+. "$HOME/.asdf/asdf.sh"
