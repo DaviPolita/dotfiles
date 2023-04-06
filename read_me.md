@@ -1,13 +1,6 @@
 ## 0 - Install buil tools
 `sudo apt install build-essential`
 
-## 1 - Install and apply Chezmoi
-`wget https://github.com/twpayne/chezmoi/releases/download/v2.31.0/chezmoi_2.31.0_linux_amd64.deb`
-`chezmoi init https://github.com/davipolita/dotfiles.git`
-or 
-`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply davipolita`
-
-
 ## 2 - Intall zsh
 `sudo apt install zsh`
 `chsh -s $(which zsh)`

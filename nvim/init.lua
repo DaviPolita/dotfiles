@@ -1,2 +1,1 @@
-require("modules.remap")
-require("modules.lazy")
+require("modules")
