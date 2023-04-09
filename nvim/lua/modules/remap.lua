@@ -1,3 +1,22 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>-", vim.cmd.Ex)
 
+-- move lines with alt-j and alt-k
+vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
+
+-- keep the cursor in place when doing search stuff
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- leader p to paste without copy to buffer
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- leader y to copy to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
