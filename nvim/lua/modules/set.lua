@@ -22,3 +22,11 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- open and close the NvimTree
+vim.api.nvim_create_autocmd({"QuitPre"}, {
+    callback = function() vim.cmd("NvimTreeClose") end,
+})
+vim.api.nvim_create_autocmd({"VimEnter"}, {
+    callback = function() vim.cmd("NvimTreeOpen") end,
+})
