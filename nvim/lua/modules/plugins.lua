@@ -67,7 +67,8 @@ local plugins = {
     {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    }
+    },
+    {'akinsho/toggleterm.nvim', version = "*", config = true}
 
 }
 local opts = {}
