@@ -1,3 +1,5 @@
+vim.api.nvim_exec('language en_US', true)
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -25,8 +27,12 @@ vim.opt.colorcolumn = "80"
 
 -- open and close the NvimTree
 vim.api.nvim_create_autocmd({"QuitPre"}, {
-    callback = function() vim.cmd("NvimTreeClose") end,
+    callback = function()
+        vim.cmd("NvimTreeClose")
+    end
 })
 vim.api.nvim_create_autocmd({"VimEnter"}, {
-    callback = function() vim.cmd("NvimTreeOpen") end,
+    callback = function()
+        vim.cmd("NvimTreeOpen")
+    end
 })

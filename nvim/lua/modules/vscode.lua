@@ -60,3 +60,20 @@ vim.api.nvim_set_keymap("n", "n", "nzzzv", {
 vim.api.nvim_set_keymap("n", "N", "Nzzzv", {
     silent = true
 })
+
+-- move lines with alt-j and alt-k
+-- vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
+--
+-- vim.api.nvim_set_keymap("v", "<C-j>", ":call VSCodeNotifyRange('editor.action.moveLinesUpAction')<CR>", {
+--     silent = true
+-- })
+-- vim.api.nvim_set_keymap("x", "<C-j>", ":call VSCodeNotify('editor.action.moveLinesUpAction')<CR>", {
+--     silent = true
+-- })
+-- vim.api.nvim_set_keymap("v", "<M-k>", ":call VSCodeCallVisual('editor.action.moveLinesDownAction')<CR>", {
+--     silent = true
+-- })
+-- vim.api.nvim_set_keymap("n", "<M-k>", ":call VSCodeCallVisual('editor.action.moveLinesDownAction')<CR>", {
+--     silent = true
+-- })
