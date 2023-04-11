@@ -26,4 +26,6 @@ vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, {desc = "Toggle File Explorerer"})
+vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, {
+    desc = "Toggle File Explorerer"
+})
