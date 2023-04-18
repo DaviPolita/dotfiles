@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero').preset({"recommended"})
+local lsp = require('lsp-zero').preset({ "recommended" })
 
 local cmp = require('cmp')
 local cmp_select = {
@@ -29,7 +29,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "K", function()
         vim.lsp.buf.hover()
     end, opts)
-
+    lsp.buffer_autoformat()
 end)
 
 -- (Optional) Configure lua language server for neovim
