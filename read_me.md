@@ -1,6 +1,9 @@
 ## 0 - Install buil tools
 `sudo apt install build-essential`
 
+## 0 - For Windows set XDG_CONFIG_HOME to %USERPROFILE%\.config
+`setx XDG_CONFIG_HOME %USERPROFILE%\.config /m`
+
 ## 2 - Intall zsh
 `sudo apt install zsh`
 `chsh -s $(which zsh)`
@@ -27,3 +30,4 @@ inside tmux
 
 ## extra - Proxy setup
 for WSL proxy setup, set the proxy variables inside /etc/profile.d/proxy.sh
+

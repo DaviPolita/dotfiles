@@ -8,4 +8,4 @@ install dependencies
 ## 2 - Install on Windows
 `scoop install neovim`
 `scoop install ripgrep`
-`scoop install fz`
+`scoop install fzf`
