@@ -3,3 +3,5 @@ $env:POSH_GIT_ENABLED = $true
 
 # set aliases 
 Set-Alias -Name "vim" -Value "nvim"
+
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
