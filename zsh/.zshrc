@@ -35,6 +35,8 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+bindkey '^ ' autosuggest-accept
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ./.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

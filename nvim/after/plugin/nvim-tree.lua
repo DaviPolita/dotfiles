@@ -7,6 +7,7 @@ local function on_attach(bufnr)
             buffer = bufnr,
             noremap = true,
             silent = true,
+            visible = true,
             nowait = true
         }
     end
