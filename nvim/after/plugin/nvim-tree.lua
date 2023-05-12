@@ -1,13 +1,15 @@
 local function on_attach(bufnr)
     local api = require('nvim-tree.api')
 
+    -- show gitignore files by default 
+    api.tree.toggle_gitignore_filter(false)
+
     local function opts(desc)
         return {
             desc = 'nvim-tree: ' .. desc,
             buffer = bufnr,
             noremap = true,
             silent = true,
-            visible = true,
             nowait = true
         }
     end
