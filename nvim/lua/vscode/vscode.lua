@@ -5,8 +5,8 @@ local rpath = vim.o.runtimepath:gsub(",*\\after", "")
 vim.api.nvim_set_option("runtimepath", rpath)
 
 -- Set shada to "NONE"
---vim.opt.shada = "NONE"
-vim.opt.shada = ""
+-- vim.opt.shada = "NONE"
+-- vim.opt.shada = ""
 --
 vim.api.nvim_exec("language en_US", true)
 
