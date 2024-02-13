@@ -1,4 +1,4 @@
 #HotIf WinActive("ahk_exe Acrobat.exe", )
-    j::WheelUp
-    k::WheelDown
+    k::WheelUp
+    j::WheelDown
 #HotIf
