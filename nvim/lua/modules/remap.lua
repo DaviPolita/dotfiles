@@ -29,3 +29,5 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, {
     desc = "Toggle File Explorerer"
 })
+-- snippets
+vim.api.nvim_set_keymap('n', '<leader>gg', [[:<C-u>lua vim.fn.append(vim.fn.line('.'), 'if err != nil {')<CR>:<C-u>lua vim.fn.append(vim.fn.line('.')+1, '    return err')<CR>:<C-u>lua vim.fn.append(vim.fn.line('.')+2, '}')<CR>:noh<CR>jjj]], { noremap = true, silent = true })
