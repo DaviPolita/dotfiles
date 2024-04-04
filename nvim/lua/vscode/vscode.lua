@@ -62,6 +62,11 @@ vim.api.nvim_set_keymap("n", "N", "Nzzzv", {
     silent = true
 })
 
+-- go to implementation
+vim.api.nvim_set_keymap("n", "gi", ":call VSCodeNotify('editor.action.goToImplementation')<CR>", {
+    silent = true
+})
+
 -- move lines with alt-j and alt-k
 -- vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
 -- vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")

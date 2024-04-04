@@ -1,10 +1,11 @@
+require('telescope').setup { defaults = { file_ignore_patterns = { "vendor" } } }
 local builtin = require('telescope.builtin')
 local utils = require('telescope.utils')
 
 --vim.keymap.set('n', '<C-p>', function()
 --    builtin.find_files({
---        cwd = utils.buffer_dir() 
---}) 
+--        cwd = utils.buffer_dir()
+--})
 --end, {
 --    desc = "Find File"
 --})
