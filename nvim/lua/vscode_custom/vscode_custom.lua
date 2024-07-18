@@ -1,4 +1,4 @@
-print("Loading vscode.lua")
+print("Loading vscode_custom.lua")
 -- Remove the ~/after directory from the runtimepath
 local rpath = vim.o.runtimepath:gsub(",*\\after", "")
 -- print(rpath)

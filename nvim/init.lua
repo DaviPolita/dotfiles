@@ -1,6 +1,6 @@
 if vim.g.vscode then
     -- VSCode extension
-    require("vscode")
+    require("vscode_custom")
 else
     -- ordinary Neovim
     -- disable netrw at the very start of your init.lua (strongly advised)
