@@ -16,5 +16,5 @@ alias vim="nvim"
 alias cz="chezmoi"
 alias la="ls -l -a"
 
-# golang serer autoreload air
-alias air='$(go env GOPATH)/bin/air'
+# golang serer autoreload airalias
+# alias air='$(go env GOPATH)/bin/air'

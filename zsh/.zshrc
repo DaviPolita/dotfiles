@@ -1,6 +1,8 @@
 # start tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux attach -t home || tmux new -s home
+  if [ -z "$VSCODE_IPC_HOOK_CLI" ]; then
+    tmux attach -t home || tmux new -s home
+  fi
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
