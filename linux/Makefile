@@ -19,8 +19,25 @@ awg:
 	rm -f /etc/wsl.conf
 	cp /etc/wsl_false.conf /etc/wsl.conf
 
+.PHONY: gp_term
+gp_term:
+	tmux new-window \; \
+	split-window -h \; \
+	send-keys 'cd Projetos/Applications/GP/BE/api-server && make dev' C-m \; \
+	select-pane -t 0 \; \
+	send-keys 'cd Projetos/Applications/GP/FE/client && make dev' C-m
+
 .PHONY: gp
-gp:
+gp: gp_term
 	@echo 'Starting GP App Dev Enviroment...'
 	code Projetos/Applications/GP/BE/api-server
 	code Projetos/Applications/GP/FE/client
+
+
+
+
+.PHONY: etl
+etl:
+	@echo 'Starting Airflow Dev Enviroment...'
+	code Projetos/Airflow/SAP_ETL
+
