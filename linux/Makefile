@@ -33,8 +33,10 @@ gp: gp_term
 	code Projetos/Applications/GP/BE/api-server
 	code Projetos/Applications/GP/FE/client
 
-
-
+.PHONY: gp_not
+gp_not:
+	code Projetos/Applications/GP/services/gp-notify
+	cd Projetos/Applications/GP/services/gp-notify && make dev
 
 .PHONY: etl
 etl:
