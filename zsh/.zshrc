@@ -51,3 +51,11 @@ source "$ZDOTDIR/zsh-functions"
 source "$ZDOTDIR/zsh-aliases"
 
 . "$HOME/.asdf/asdf.sh"
+
+# pnpm
+export PNPM_HOME="/home/davi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -18,5 +18,7 @@ alias la="ls -l -a"
 
 alias air='$(go env GOPATH)/bin/air'
 
+alias claude='NODE_EXTRA_CA_CERTS=~/certs/WEG Internal Secure Certificate Authority ROOT.crt claude'
+
 # golang serer autoreload airalias
 # alias air='$(go env GOPATH)/bin/air'

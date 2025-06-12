@@ -7,6 +7,7 @@ rwg:
 	rm -f /etc/resolv.conf
 	rm -f /etc/wsl.conf
 	cp /etc/wsl_true.conf /etc/wsl.conf
+#	go env -w GOPROXY=https://proxy.golang.org,direct
 
 # .PHONY: add weg garbage back
 .PHONY: awg
@@ -18,14 +19,20 @@ awg:
 	cp /etc/resolv_bkp.conf /etc/resolv.conf
 	rm -f /etc/wsl.conf
 	cp /etc/wsl_false.conf /etc/wsl.conf
+#	go env -w GOPROXY=https://${user}:${pass}@nexus3.weg.net/repository/golang-group/,direct
+
+.PHONY: dckr
+dckr:
+	sudo service docker restart && sleep 2
 
 .PHONY: gp_term
-gp_term:
+gp_term: dckr
 	tmux new-window \; \
 	split-window -h \; \
 	send-keys 'cd Projetos/Applications/GP/BE/api-server && make dev' C-m \; \
 	select-pane -t 0 \; \
 	send-keys 'cd Projetos/Applications/GP/FE/client && make dev' C-m
+
 
 .PHONY: gp
 gp: gp_term
