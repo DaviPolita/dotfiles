@@ -59,3 +59,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# extra certs 
+export NODE_EXTRA_CA_CERTS="$HOME/certs/WEG_Internal_Secure_Certificate_Authority_ROOT.crt"
+
+# LETS GO
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/opt/nvim/
+export PATH="$PATH:$(go env GOPATH)/bin"

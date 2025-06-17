@@ -18,8 +18,8 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 # LETS GO
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/opt/nvim/
+#export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:/opt/nvim/
 
 # remap caps to escape
 # setxkbmap -option caps:escape
