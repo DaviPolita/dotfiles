@@ -5,6 +5,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   fi
 fi
 
+# Ensure asdf shims take priority
+export PATH="$HOME/.asdf/shims:$PATH"
+. "$HOME/.asdf/asdf.sh"
+
+# Remove Windows pyenv paths to avoid interpreter conflicts (more flexible)
+PATH=$(echo "$PATH" | tr ':' '\n' | grep -vE '/mnt/c/Users/.*/\.pyenv/pyenv-win' | paste -sd:)
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -50,7 +58,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$ZDOTDIR/zsh-functions"
 source "$ZDOTDIR/zsh-aliases"
 
-. "$HOME/.asdf/asdf.sh"
 
 # pnpm
 export PNPM_HOME="/home/davi/.local/share/pnpm"
@@ -67,3 +74,19 @@ export NODE_EXTRA_CA_CERTS="$HOME/certs/WEG_Internal_Secure_Certificate_Authorit
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/opt/nvim/
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Claude Code LSP
+export ENABLE_LSP_TOOL=1
+
+export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
+export PATH=/opt/oracle/instantclient:$PATH
+export ORACLE_HOME=/opt/oracle/instantclient
+
+# BUN
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
+
+# bun completions
+[ -s "/home/davi/.bun/_bun" ] && source "/home/davi/.bun/_bun"

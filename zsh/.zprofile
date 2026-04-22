@@ -17,6 +17,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+# Local binaries (canonical path for tools that check PATH)
+export PATH="$HOME/.local/bin:$PATH"
+
 # LETS GO
 #export PATH=$PATH:/usr/local/go/bin
 #export PATH=$PATH:/opt/nvim/

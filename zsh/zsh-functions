@@ -7,3 +7,66 @@ function yanktoclipboard(){
 function pastefromclipboard(){
     RBUFFER=$(xsel -o -b </dev/null)$RBUFFER
 }
+
+function cdw() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: cdw <command>"
+    return 1
+  fi
+
+  local path
+  path=$(which "$1" 2>/dev/null)
+
+  if [[ -z "$path" ]]; then
+    echo "Command '$1' not found."
+    return 1
+  fi
+
+  cd "$(dirname "$path")" || return
+}
+
+# CNTLM proxy functions
+__CNTLM_HOST=127.0.0.1
+__CNTLM_PORT=3128
+__CNTLM_NO_PROXY="localhost,127.0.0.1,::1,*.weg.net"
+
+__cntlm_is_listening() {
+    local port="$__CNTLM_PORT"
+    (echo > /dev/tcp/$__CNTLM_HOST/$port) >/dev/null 2>&1
+}
+
+proxy_on() {
+    if __cntlm_is_listening; then
+        export http_proxy="http://$__CNTLM_HOST:$__CNTLM_PORT"
+        export https_proxy="$http_proxy"
+        export ftp_proxy="$http_proxy"
+        export HTTP_PROXY="$http_proxy"
+        export HTTPS_PROXY="$http_proxy"
+        export FTP_PROXY="$http_proxy"
+        export no_proxy="$__CNTLM_NO_PROXY"
+        export NO_PROXY="$no_proxy"
+        echo ">> Proxy activated"
+    else
+        echo "!! CNTLM not running on $__CNTLM_HOST:$__CNTLM_PORT"
+    fi
+}
+
+proxy_off() {
+    unset http_proxy https_proxy ftp_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY
+    unset no_proxy NO_PROXY
+    echo ">> Proxy deactivated"
+}
+
+proxy_status() {
+    if [ -n "${http_proxy:-}" ]; then
+        echo "Proxy active: $http_proxy"
+    else
+        echo "Proxy not active"
+    fi
+}
+
+# Default enable proxy for interactive shells
+if [[ $- == *i* ]]; then
+    proxy_on >/dev/null 2>&1 || true
+fi
+
