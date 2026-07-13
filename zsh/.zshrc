@@ -59,14 +59,6 @@ source "$ZDOTDIR/zsh-functions"
 source "$ZDOTDIR/zsh-aliases"
 
 
-# pnpm
-export PNPM_HOME="/home/davi/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # extra certs 
 export NODE_EXTRA_CA_CERTS="$HOME/certs/WEG_Internal_Secure_Certificate_Authority_ROOT.crt"
 
@@ -90,3 +82,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
 [ -s "/home/davi/.bun/_bun" ] && source "/home/davi/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/davi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
